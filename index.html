@@ -4,7 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Đăng nhập</title>
-<link rel="stylesheet" href="../CSS/style.css">
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  
+  
+  </style>
 </head>
 <body>
 
@@ -25,7 +68,22 @@
       </div>
       
 
-<script src="../JAVA/dsc.js"></script>
+<script >document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    
+    if (username === 'admin' && password === 'password') {
+        // Đăng nhập thành công
+        alert('Đăng nhập thành công!');
+        // Điều hướng đến trang chính
+        window.location.href = '../page.html'; // Thay 'homepage.html' bằng đường dẫn của trang chính
+    } else {
+        // Hiển thị thông báo lỗi
+        document.getElementById('error-message').innerText = 'Tên đăng nhập hoặc mật khẩu không đúng.';
+    }
+});
+</script>
 
 </body>
 </html>
