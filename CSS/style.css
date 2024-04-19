@@ -1,16 +1,44 @@
-.gallery {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-}
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
 
-.gallery img {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    border: 2px solid black;
-    transition: transform 0.5s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
+  
+  
+  
